@@ -1,0 +1,23 @@
+#include<stdio.h>		//WAP to print a pattern
+int main ()
+{
+  int i,j;
+ 	
+   for (i = 1; i <= 5; ++i) //1st pattern 
+   {
+      for (j = 1; j <= i; ++j) 
+      {
+         printf("* ");
+      }
+      printf("\n");
+   }
+   printf("\n"); 
+   
+    for (i = 5; i >= 1; --i) {  //inverted pattern 
+      for (j = 1; j <= i; ++j) {
+         printf("* ");
+      }
+      printf("\n");
+   }
+   return 0; 
+} 
