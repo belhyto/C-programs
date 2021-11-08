@@ -1,0 +1,30 @@
+#include <stdio.h>  //WAP to find combination and permutations.
+long factorial(int x)
+{
+    long fact =1;
+    for (int i=2;i<=x; i++)
+    fact =fact *i;
+    return fact;
+}
+long ncr (int n, int r)
+{
+    long ncr= factorial(n)/ (factorial(r) * factorial(n-r));
+    return ncr;
+}
+long npr (int n, int r)
+{
+    long npr= factorial(n)/ factorial(n-r);
+    return npr;
+}
+int main()
+{
+    int n,r;
+    printf("n= ");
+    scanf("%d", &n);
+    printf("r= ");
+     scanf("%d", &r);
+    printf("nCr\n %dC%d = %ld\n",n,r,ncr(n,r));
+    printf("nPr\n %dP%d = %ld\n",n,r,npr(n,r));
+
+    return 0;
+}
